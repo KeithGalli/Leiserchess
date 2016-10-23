@@ -1,0 +1,48 @@
+This directory contains the codebase for the main game engine, leiserchess.
+
+leiserchess.c:
+
+        The main file that implements the UCI specification and
+        invokes everything else. In UCI, when you type "go", a call is made
+				to the search routine. To do so, a series of function calls happen : UciBeginSearch ->
+				entry_point -> searchRoot in search.c
+
+scout_search.c
+				Implements the low cost null-window search, which is what differentiates scout search from
+				Alpha-Beta pruning.
+
+search.c:
+        Implements the search routine (scout search). Includes functions, searchRoot and searchPV (alpha-beta 
+				pruning). searchRoot first makes a call to searchScout in scout_search.c, followed by a call to
+				searchPV.
+
+abort.c:
+	Allows the parallel scout search to be aborted due to beta
+	cutoff.
+
+eval.c:
+        The static evaluator that implements different heuristics of
+        the player.
+
+move_gen.c:
+        Implements the board representation.
+
+tt.c:
+        Implements the transposition table used by the player (a
+        hashtable storing positions seen by the player and some other
+        relevant information for evaluating a position).
+
+util.c:
+        Utility functions, such as random number generator, printing
+        debugging messages, etc.
+
+fen.c:
+        The UCI uses the FEN notations (see description of the FEN
+        notation in doc/engine-interface.txt), so the program needs to
+        translate a FEN string into the underlying board
+        representation, and this file contains that logic.
+
+speculative_add.c:
+	For the parallel scout search, this utility function provides
+	a reducer that adds up its arguments, but if an abort occurs,
+	it does not add in the updates by aborted subcomputations.

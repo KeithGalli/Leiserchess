@@ -1,0 +1,21 @@
+info depth 1 move_no 1 time (microsec) 35 nodes 71 nps 2008942
+info score cp -3 pv d1U
+info depth 1 move_no 4 time (microsec) 76 nodes 144 nps 1881296
+info score cp -1 pv h2g3
+info depth 1 move_no 13 time (microsec) 95 nodes 223 nps 2323907
+info score cp 21 pv j4R
+info depth 2 move_no 1 time (microsec) 1137 nodes 3586 nps 3151837
+info score cp 27 pv j4R b6R
+info depth 3 move_no 1 time (microsec) 3967 nodes 17310 nps 4363431
+info score cp 22 pv j4R b6R i6h5
+info depth 4 move_no 1 time (microsec) 10516 nodes 34288 nps 3260519
+info score cp 13 pv j4R b6R i6R a5b5
+info depth 5 move_no 1 time (microsec) 68018 nodes 365227 nps 5369528
+info score cp 9 pv j4R b6R i6R a5b5 f0f1
+info depth 6 move_no 1 time (microsec) 184836 nodes 903861 nps 4890067
+info score cp 13 pv j4R b6R i6R a5b5 f0f1 c7d6
+info depth 6 move_no 57 time (microsec) 510820 nodes 2623819 nps 5136477
+info score cp 14 pv i3R b6R i6R b3b2 j4R a5b5
+info depth 7 move_no 1 time (microsec) 1181524 nodes 5661319 nps 4791538
+info score cp 8 pv i3R b6R j0i0 b6a6 j4i4 g8f7 d1e2 f7L e2L
+bestmove i3R
